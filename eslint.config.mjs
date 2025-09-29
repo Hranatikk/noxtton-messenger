@@ -1,5 +1,4 @@
 import reactCompiler from "eslint-plugin-react-compiler"
-import html from "eslint-plugin-html"
 import perfectionist from "eslint-plugin-perfectionist"
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import reactHooks from "eslint-plugin-react-hooks"
@@ -26,7 +25,6 @@ export default defineConfig([
 
     plugins: {
       "@typescript-eslint": tseslint,
-      html,
       perfectionist,
       "react-hooks": reactHooks,
       "react-compiler": reactCompiler
