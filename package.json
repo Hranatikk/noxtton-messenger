@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "bare-pack": "npx bare-pack --target ios --target android --linked --out app.bundle.mjs backend/backend.mjs"
+    "bare-pack": "npx bare-pack --target ios --target android --linked --out app.bundle.mjs backend/backend.mjs",
+    "bare-link": "npx bare-link node_modules/udx-native   -t ios-arm64   -o node_modules/react-native-bare-kit/ios/addons"
   },
   "dependencies": {
     "@react-native-clipboard/clipboard": "^1.16.3",
