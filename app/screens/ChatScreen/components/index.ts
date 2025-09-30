@@ -1,4 +1,4 @@
-export * from "./Connected"
+export * from "./MessageField"
 export * from "./Host"
 export * from "./Idle"
 export * from "./Message"

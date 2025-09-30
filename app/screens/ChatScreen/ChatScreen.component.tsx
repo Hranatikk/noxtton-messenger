@@ -4,7 +4,7 @@ import { KeyboardAwareScrollView } from "react-native-keyboard-controller"
 import { SafeAreaView } from "react-native-safe-area-context"
 import type { Msg } from "../../../core/services"
 import { styles } from "./ChatScreen.styles"
-import { Connected, Host, Idle, Message, Ready } from "./components"
+import { Host, Idle, Message, MessageField, Ready } from "./components"
 
 export type Mode = "idle" | "ready" | "hosting" | "connected"
 
@@ -44,7 +44,7 @@ const Component = ({
   )
 
   return (
-    <SafeAreaView edges={["top", "bottom"]} style={styles.container}>
+    <SafeAreaView edges={["top"]} style={styles.container}>
       {mode === "idle" && (
         <Idle
           username={username}
@@ -79,7 +79,7 @@ const Component = ({
       )}
 
       {mode === "connected" && (
-        <Connected text={text} onChangeText={onChangeText} onSend={onSend} />
+        <MessageField text={text} onChangeText={onChangeText} onSend={onSend} />
       )}
     </SafeAreaView>
   )
