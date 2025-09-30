@@ -1,6 +1,12 @@
 import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
+  container: {
+    bottom: 0,
+    flex: 1,
+    position: "absolute",
+    width: "100%",
+  },
   input: {
     borderColor: "#ddd",
     borderRadius: 8,
@@ -12,9 +18,12 @@ export const styles = StyleSheet.create({
   },
   row: {
     alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 12,
+    padding: 16,
     width: "100%",
   },
 })

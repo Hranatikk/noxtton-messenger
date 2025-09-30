@@ -3,9 +3,9 @@ import { StyleSheet } from "react-native"
 export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    backgroundColor: "#FFFFFF",
     flex: 1,
-    padding: 16,
-    paddingTop: 32,
+    paddingVertical: 16,
   },
   h1: {
     fontSize: 20,
@@ -18,6 +18,8 @@ export const styles = StyleSheet.create({
   },
   listContainer: {
     padding: 8,
+    paddingBottom: 44,
+    paddingHorizontal: 16,
   },
   root: {
     flex: 1,

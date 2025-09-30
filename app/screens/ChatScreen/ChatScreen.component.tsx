@@ -1,5 +1,6 @@
 import React from "react"
 import { FlatList } from "react-native"
+import { KeyboardAwareScrollView } from "react-native-keyboard-controller"
 import { SafeAreaView } from "react-native-safe-area-context"
 import type { Msg } from "../../../core/services"
 import { styles } from "./ChatScreen.styles"
@@ -43,7 +44,7 @@ const Component = ({
   )
 
   return (
-    <SafeAreaView edges={["top"]} style={styles.container}>
+    <SafeAreaView edges={["top", "bottom"]} style={styles.container}>
       {mode === "idle" && (
         <Idle
           username={username}
@@ -68,8 +69,12 @@ const Component = ({
           contentContainerStyle={styles.listContainer}
           data={messages}
           keyExtractor={m => m.id}
+          showsVerticalScrollIndicator={false}
           style={styles.list}
           renderItem={renderItem}
+          renderScrollComponent={props => (
+            <KeyboardAwareScrollView {...props} />
+          )}
         />
       )}
 
